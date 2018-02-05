@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #@author Sharfaraz Salek
 #Dimensionality reduction via PCA
 
@@ -36,7 +37,7 @@ def project(rawData):
 	
 	if maxIdx <= maxIdx2: #if the index of first maximum is equal or less
 		maxIdx2 += 1	  #original position would be +1 of new
-	pca2 = rawData[:,1:].dot(eigenvectors[maxIdx2,:])
+	pca2 = rawData[:,1:].dot(eigenvectors[:,maxIdx2	])
 	
 	#combining both vectors with classification
 	combined = np.vstack((rawData[:,0], pca, pca2)).T
